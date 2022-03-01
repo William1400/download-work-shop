@@ -112,4 +112,4 @@ function App () {
 ```
 <br>
 
-[NEXT](./typescript.md)
+[Aller à la création de quiz !!](./quiz_app/complet.md)

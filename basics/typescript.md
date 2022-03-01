@@ -248,4 +248,4 @@ Pour celà lancez le compilateur TypeScript dans la ligne de commande :
 
 Le résultat sera un fichier greeter.js qui contient le même JavaScript que celui que vous avez entré. Nous sommes prêts à utiliser TypeScript dans notre application JavaScript !
 
-[Aller à la création de quiz !!](../quiz_app/start_aplication.md)
+[React TypeScript](./react-TS.md)
