@@ -3,7 +3,7 @@
 ## Présentation
 
 - [1. Présentation de TypeScript](./basics/typescript.md)
-- [2. GET STARTED REACT TYPESCRIPT](./basics/react-TS.md)
+- [2. Get started React-TS](./basics/react-TS.md)
 
 ## Project Workshop Quiz-APP
 
