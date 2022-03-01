@@ -9,8 +9,8 @@
 
 - [1. Début de l'application ](./quiz_app/start_aplication.md)
 - [2. Fin de l'application ](./quiz_app/aplication.md)
-- [3. Les code](./quiz_app/code_source.md)
-- [3. Desing d'application](./quiz_app/style.md)
+- [3. Le code](./quiz_app/code_source.md)
+- [3. Design d'application](./quiz_app/style.md)
 - [4. Code Complet](./quiz_app/complet.md)
 
 ## Quiz Multiplayer
