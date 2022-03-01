@@ -2,12 +2,8 @@ Workshop Type-Script-React.js
 
 ## Présentation
 
-- [1. Presentation](./basics/TypeScript/01.Presentation.md)
-- [2. TSCONFIG](./basics/TypeScript/02.tsconfig.md)
-- [3. Types](./basics/TypeScript/03.types.md)
-- [4. GET STARTED REACT TYPESCRIPT](./basics/react-TS.md)
-- [5. Présentation de TypeScript](./basics/typescript.md)
-
+- [1. Présentation de TypeScript](./basics/typescript.md)
+- [2. GET STARTED REACT TYPESCRIPT](./basics/react-TS.md)
 <!-- 
 ## Project Workshop Quiz-APP
 
