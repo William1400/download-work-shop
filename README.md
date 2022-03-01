@@ -4,11 +4,11 @@
 
 - [1. Présentation de TypeScript](./basics/typescript.md)
 - [2. GET STARTED REACT TYPESCRIPT](./basics/react-TS.md)
-<!-- 
+
 ## Project Workshop Quiz-APP
 
 -[1. Début de l'application ](./quiz_app/start_aplication.md)
--[2. Fin de l'application ](./quiz_app/aplication.md)
+<!---[2. Fin de l'application ](./quiz_app/aplication.md)
 -[3. Desing d'application](./quiz_app/style.md)
 -[4. Code Complet](./quiz_app/complet.md)
 
