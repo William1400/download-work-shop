@@ -126,3 +126,134 @@ const QuestionCard: React.FC<Props> = ({
 <br>
 <br>
 
+## Troisième étape
+Nous allons maintenant implémenter les Hooks.
+Il faut décommenter useState pour implémenter les hooks.
+
+**App.tsx**
+
+```tsx
+const [loading, setLoading] = useState(false);
+const [questions, setQuestions] = useState/* <QuestionState[]> */([]);
+const [number, setNumber] = useState(0);
+const [userAnswers, setUserAnswers] = useState/* <AnswerObject[]> */([]);
+const [score, setScore] = useState(0);
+const [gameOver, setGameOver] = useState(true);
+
+```
+
+Nous avons assignés 2 types que nous n'avons pas défini encore **QuestionState** et **AnswerObject**.
+Crée un fichier API.ts (src/**API.ts**) et dans ce fichier nous allons fetch l'API;
+
+Définissons **QuestionState**:
+**API.ts**
+```tsx
+//il faut détailler l'objet question
+export type Question = {
+
+    category: string;
+    correct_answer: string;
+    difficulty: string;
+    incorrect_answers: string[];
+    question: string;
+    type: string;
+}
+
+
+// export question via Question State
+export type QuestionState = Question & { answers: string[]};
+```
+Ensuite préparons un objet qui nous servira pour l'API: **Difficulty**;
+
+```tsx
+// export objet question difficulter
+export enum Difficulty {
+
+    EASY = "easy",
+    MEDIUM = "medium",
+    HARD = "hard",
+}
+```
+**enum** permet de définir un ensemble de constantes nommées. L'utilisation des enums peut faciliter la documentation, ou la création d'un ensemble de cas distincts. TypeScript fournit à la fois des enums numériques et des enums basés sur des chaînes de caractères.
+
+<br>
+
+Créer le fichier et mettre **utils.ts** dans le dossier *src*
+
+ici, nous créons un *array* pour passer la fonction aléatoire avec random et générer aléatoirement nos questions 
+
+```tsx
+// quick fix random const
+export const shuffleArray = (array: any[]) =>
+
+    [...array].sort(() => Math.random() - 0.5);
+
+
+
+```
+**API.ts**
+```tsx
+import {shuffleArray} from "./utils.ts"
+// aller regarder la promise localhost
+```
+
+Dans API.ts, nous allons fetch l'API externe:
+
+```tsx
+// fetch asynchrone sur l'API + les deux objets que l'on a besoin 
+export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty) => {
+
+    const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+    const data = await (await fetch(endpoint)).json();
+    
+    return data.results.map((question: Question) => ({
+
+        ...question,
+        answers: shuffleArray([
+            
+            ...question.incorrect_answers, question.correct_answer,
+        ]),
+    }));
+    
+};
+```
+<br>
+Nous allons instancier *TOTAL_QUESTIONS* 
+**App.tsx**
+```tsx
+// à placer au dessus de la fonction App
+const TOTAL_QUESTIONS = 15;
+```
+Modifier le bloc return dans 
+
+**App.tsx**
+
+```tsx
+
+
+    return (
+
+            <div className="App" >
+            
+                <h1>React Quiz</h1>
+            
+                <QuestionCard
+                       
+                       questionNumber={number + 1}
+                       totalQuestions={TOTAL_QUESTIONS}
+                       question={questions[number].question}
+                       answers={questions[number].answers}
+                       userAnswer={userAnswers ? userAnswers[number] : undefined}
+                       callback={checkAnswer}
+                />
+                
+                <button className="next" onClick={nextQuestion}>Next Question</button>
+               
+            
+            </div>
+    );
+
+```
+
+
+Maintenant, allez à la suite pour integrer les Types [ici](./aplication.md)
