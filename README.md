@@ -22,5 +22,5 @@
 - [Gather TypeScript React](https://app.gather.town/app/H5GU7O4UvKXjPVqI/Workshop%20React-TS)
 - [Slides](https://view.genial.ly/621cb1c093b5df0017e13de1/presentation-vibrant-flipped-classroom-presentation)
 - [Figma](https://www.figma.com/file/TT2Uc9Xl3M35sJGOd8fahn/Untitled?node-id=0%3A1)
-- [Trello](https://trello.com/b/cZXECma4/work-shop) -->
+- [Trello](https://trello.com/b/cZXECma4/work-shop) 
 
